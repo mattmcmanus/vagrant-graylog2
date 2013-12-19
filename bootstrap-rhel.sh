@@ -40,6 +40,3 @@ sudo yum install java-1.7.0-openjdk.x86_64 -y -q
   sudo tar xfz /vagrant/src/${graylog2_ui}.tgz -C /opt/
   cp /vagrant/config/graylog2-web-interface.conf /opt/$graylog2_ui/conf/graylog2-web-interface.conf
 )
-
-exit 0
-
