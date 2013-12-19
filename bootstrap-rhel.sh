@@ -25,7 +25,7 @@ sudo yum install java-1.7.0-openjdk.x86_64 -y -q
 )
 
 # Installing Graylog-Server v0.20.0-preview.8
-[[ ! -d ~/$graylog2_server ]] &&
+[[ ! -d /opt/$graylog2_server ]] &&
 (
   echo " --- Installing Graylog-Server"
   sudo tar xfz /vagrant/src/${graylog2_server}.tgz -C /opt/
@@ -34,7 +34,7 @@ sudo yum install java-1.7.0-openjdk.x86_64 -y -q
   sudo cp /vagrant/config/graylog2.conf /etc/graylog2.conf
 )
 
-[[ ! -d ~/$graylog2_ui ]] &&
+[[ ! -d /opt/$graylog2_ui ]] &&
 (
   echo " --- Installing Graylog-Web-Interface"
   sudo tar xfz /vagrant/src/${graylog2_ui}.tgz -C /opt/
