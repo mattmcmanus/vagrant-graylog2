@@ -8,6 +8,9 @@ graylog2_ui="graylog2-web-interface-0.20.0-preview.8"
 (
   echo " --- Installing MongoDB"
   cp ./config/mongodb.repo /etc/yum.repos.d/
+  sudo mkdir -p /data/db
+  sudo chmod 0755 /data/db
+  sudo chown mongod:mongod /data/db
   sudo yum install mongo-10gen mongo-10gen-server -y -q
 )
 
